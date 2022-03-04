@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'submitFont';
+    src: url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+}
+
+body {
+    border: solid black 4px;
+    background-color: darkgray;
+}
+
+.journal-input-container {
+    display: flex;
+    justify-content: center;
+}
+
+.journal-input {
+    display: flex;
+    width: 30%; 
+    align-items: center;
+    flex-direction: column;
+    max-width: 50em;
+    margin-bottom: .5em;
+}
+
+.intro {
+    font-size: x-large;
+    width: 50%;
+    margin-left: .5em;
+}
+
+.input-column fieldset{
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: large;
+    border: 2px black solid;
+    border-radius: 10px;
+    margin-bottom: .5em;
+    
+}
+
+.input-column {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.logo img{
+    min-width: 25em;
+    min-height: 20em;
+    width: 25em;
+    height: 20em;
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-variant-caps: all-small-caps;
+}
+
+textarea {
+    resize: vertical;
+    
+}
+
+.record-button {
+    height: 2.5em;
+    margin-left: 1em;
+    margin-top: -.5em;
+    background-color: #CA6C6C;
+    color:whitesmoke;
+    font-family: 'submitFont;';
+    font-weight: bold;
+}
+
+.entries-column {
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: large;
+    border: 2px white solid;
+    border-radius: 10px;
+    margin: .5em;
+    margin-bottom: .5em;
+    padding: .5em;
+    width: 50%;
+    
+}
+
+.journal-entries {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.section-title {
+    margin-left: .5em;
+    font-variant-caps:small-caps;
+
+}
