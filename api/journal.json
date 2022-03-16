@@ -1,32 +1,39 @@
 {
-    "entries": [
-        {
-            "id": 1,
-            "date": "02/14/2022",
-            "concept": "First Day",
-            "entry": "First day at NSS! We mostly went over introductions to our classmates, the staff, the overall goal of the program and what is expected of us.",
-            "understanding": ""
-        },
-        {
-            "id": 2,
-            "date": "03/01/2022",
-            "concept": "Created This Journal",
-            "entry": "Used what we learned with Martin's Aquarium (importing JS, modular JS, using JS to generate HTML and have it render on the DOM) to create a personal journal. I feel like I understand all of the concepts pretty well but can't quite recreate them from memory, just need a bit more practice. Being able to create my own personal site and have no restraints on its appearance is cool.",
-            "understanding": "I think I've got it, but will need to check notes."
-        },
-        {
-            "id": 3,
-            "date": "02/25/2022",
-            "concept": "Group Project 1 Presentation",
-            "entry": "First time taking all this new knowledge and using it in a collaborative setting. I enjoyed working with my group and think we did a great job. I learned how to make a clickable map which was cool.",
-            "understanding": "Got it down."
-        },
-        {
-            "id": 4,
-            "date": "03/05/2022",
-            "concept": "Group Project 2 Presentation",
-            "entry": "We took all the concepts we've learned so far about proper planning, HTML site layout and CSS styling and combined those with new knowledge about JS imports and dynamically rendering HTML using JS to create a better, more modular version of the country sites we did earlier.",
-            "understanding": "Need more practice."
-        }
-    ]
+  "entries": [
+    {
+      "id": 1,
+      "date": "02/14/2022",
+      "concept": "First Day",
+      "entry": "First day at NSS! We mostly went over introductions to our classmates, the staff, the overall goal of the program and what is expected of us.",
+      "understanding": "Need more practice."
+    },
+    {
+      "id": 2,
+      "date": "03/01/2022",
+      "concept": "Created This Journal",
+      "entry": "Used what we learned with Martin's Aquarium (importing JS, modular JS, using JS to generate HTML and have it render on the DOM) to create a personal journal. I feel like I understand all of the concepts pretty well but can't quite recreate them from memory, just need a bit more practice. Being able to create my own personal site and have no restraints on its appearance is cool.",
+      "understanding": "I think I've got it, but will need to check notes."
+    },
+    {
+      "id": 3,
+      "date": "02/25/2022",
+      "concept": "Group Project 1 Presentation",
+      "entry": "First time taking all this new knowledge and using it in a collaborative setting. I enjoyed working with my group and think we did a great job. I learned how to make a clickable map which was cool.",
+      "understanding": "Got it down."
+    },
+    {
+      "id": 4,
+      "date": "03/05/2022",
+      "concept": "Group Project 2 Presentation",
+      "entry": "We took all the concepts we've learned so far about proper planning, HTML site layout and CSS styling and combined those with new knowledge about JS imports and dynamically rendering HTML using JS to create a better, more modular version of the country sites we did earlier.",
+      "understanding": "Need more practice."
+    },
+    {
+      "date": "03/16/2022",
+      "concept": "Learning about APIs and Async",
+      "entry": "",
+      "understanding": "Need more practice.",
+      "id": 5
+    }
+  ]
 }
