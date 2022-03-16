@@ -1,11 +1,17 @@
-@font-face {
+/* @font-face {
     font-family: 'submitFont';
     src: url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
-}
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 body {
     border: solid black 4px;
     background-color: darkgray;
+}
+
+main {
+    font-family: 'Montserrat';
 }
 
 .journal-input-container {
@@ -39,7 +45,6 @@ body {
     border: 2px black solid;
     border-radius: 10px;
     margin-bottom: .5em;
-    
 }
 
 .input-column {
