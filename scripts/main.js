@@ -32,6 +32,7 @@ document.querySelector(".record-button").addEventListener("click", event => {
             understanding: understanding,
         }
         createPost(entryObject)
+        .then(insertEntries())
         document.querySelector("input[name='journalDate']").value = ""
         document.querySelector("textarea[name='conceptsCovered']").value = ""
         document.querySelector("textarea[name='journalEntry']").value = ""
