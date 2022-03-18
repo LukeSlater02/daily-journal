@@ -31,9 +31,37 @@
     {
       "date": "03/16/2022",
       "concept": "Learning about APIs and Async",
-      "entry": "",
+      "entry": "APIs are cool and I've got that down. Async is rough though, just gotta get used to it & thinking about Js in that way.",
       "understanding": "Need more practice.",
       "id": 5
+    },
+    {
+      "concept": "Inputting Data in JS ",
+      "date": "2022-03-18",
+      "entry": "I can now just click the 'record journal entry' button to save these entries instead of having to manually add them to the data file. Next, I need to figure out how to repopulate the DOM with those new entries without having to refresh the page.",
+      "understanding": "I think I've got it, but will need to check notes.",
+      "id": 6
+    },
+    {
+      "concept": "adada",
+      "date": "",
+      "entry": "adada",
+      "understanding": "---",
+      "id": 7
+    },
+    {
+      "concept": "adad",
+      "date": "",
+      "entry": "adada",
+      "understanding": "Completely baffled.",
+      "id": 8
+    },
+    {
+      "concept": "awea",
+      "date": "2222-02-22",
+      "entry": "adsads",
+      "understanding": "Got it down.",
+      "id": 9
     }
   ]
 }

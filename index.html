@@ -33,7 +33,7 @@
         <form action="">
             <fieldset>
                 <label for="conceptsCovered">Concepts covered</label>
-                <textarea style="width: 25em" name="" id="" cols="10" rows=""></textarea>
+                <textarea style="width: 25em" name="conceptsCovered" id="" cols="10" rows=""></textarea>
             </fieldset>
         </form>
         </article>
@@ -41,7 +41,7 @@
         <form action="">
             <fieldset>
                 <label for="journalEntry">Journal Entry</label>
-                <textarea name="" id="" cols="60" rows="4"></textarea>
+                <textarea name="journalEntry" id="" cols="60" rows="4"></textarea>
             </fieldset>
         </form>
         </article>
@@ -50,16 +50,17 @@
             <fieldset>
                 <label for="understanding">Level of understanding</label>
                 <select style="width:23em" name="understanding" id="understanding">
-                    <option value="gotIt">Got it down.</option>
-                    <option value="thinkSo">I think I've got it, but will need to check notes.</option>
-                    <option value="needPractice">Need more practice.</option>
-                    <option value="trouble">Having trouble.</option>
-                    <option value="nope">Completely baffled.</option>
-                    <option value="fuckthis">I'm going to quit.</option>
+                    <option>---</option>
+                    <option>Got it down.</option>
+                    <option>I think I've got it, but will need to check notes.</option>
+                    <option>Need more practice.</option>
+                    <option>Having trouble.</option>
+                    <option>Completely baffled.</option>
+                    <option>I'm going to quit.</option>
                 </select>
             </fieldset>
             <article class="input-column">
-            <input class="record-button" type="submit" value="Record Journal Entry">
+                <button class="record-button" id="record-button">Record Journal Entry</button>
             </article>
         </form>
         </article>
