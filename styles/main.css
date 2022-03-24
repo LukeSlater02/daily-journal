@@ -117,3 +117,9 @@ textarea {
 .entries-column h4 {
     margin-bottom: 0
 }
+
+.journal-filter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

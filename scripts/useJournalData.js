@@ -15,6 +15,7 @@ export const getEntriesData = () => {
 const entryLog = document.querySelector(".journal-entries")
 
 export const insertEntries = () => {
+    entryLog.innerHTML = ""
     getEntriesData()
     .then(data => {
         for (const entry of data){
@@ -32,5 +33,13 @@ export const createPost = postObj => {
         body: JSON.stringify(postObj)
     })
 
-        .then(response => response.json()).then(insertEntries()) 
+        .then(response => response.json())
+}
+
+export const getFormattedDate = date => {
+    let year = date.getFullYear();
+    let month = (1 + date.getMonth()).toString().padStart(2, '0');
+    let day = date.getDate().toString().padStart(2, '0');
+  
+    return month + '/' + day + '/' + year;
 }
