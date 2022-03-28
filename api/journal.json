@@ -48,6 +48,13 @@
       "entry": "Finished the discord bot, or as finished as it's going to get. Learned a lot.",
       "understanding": "I think I've got it, but will need to check notes.",
       "id": 7
+    },
+    {
+      "concept": "Today we covered the U and D of CRUD.",
+      "date": "2022-03-28T05:00:00.000Z",
+      "entry": "Got the delete functionality working pretty easily but got distracted by styling for a while after, now it's on to the editing bit..\n\nedit: edit works edit2: still need to fix the dates",
+      "understanding": "Need more practice.",
+      "id": 8
     }
   ]
 }

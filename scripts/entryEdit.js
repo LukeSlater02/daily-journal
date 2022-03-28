@@ -1,17 +1,35 @@
 export const entryEdit = (entry) => {
-// 	return `
-//     <section id="entry__${entry.id}" class="entries-column">
-//     <h4 id="entry__${entry.id}">${entry.concept}</h4>
-//     <br id="entry__${entry.id}">${entry.understanding}
-//     <h4 id="entry__${entry.id}">${entry.date}</h4>
-//     <p id="entry__${entry.id}">${entry.entry}</p>
-//     <span><button id="edit__${entry.id}">Edit</button> <button id="delete__${entry.id}">Delete</button></span>
-// </section>
+	return `
+    <section id="entry__${entry.id}" class="entries-column">
+    <fieldset>
+    
+    <label for="newConcepts">Concepts covered</label>
+    <textarea style="width: 25em" name="newConcepts" id="" cols="10" rows="">${entry.concept}</textarea>
+    </fieldset>
+
+    <fieldset>
+    <label for="newJournalEntry">Journal Entry</label>
+    <textarea name="newJournalEntry" id="" cols="50" rows="4">${entry.entry}</textarea>
+    </fieldset>
+
+    <fieldset>
+                <label for="newUnd">Level of understanding</label>
+                <select style="width:23em" name="newUnd" id="newUnd">
+                    <option>${entry.understanding}</option>
+                    <option>Got it down.</option>
+                    <option>I think I've got it, but will need to check notes.</option>
+                    <option>Need more practice.</option>
+                    <option>Having trouble.</option>
+                    <option>Completely baffled.</option>
+                    <option>I'm going to quit.</option>
+                </select>
+            </fieldset>
+</section>
 		
-// 		<input type="hidden" value="${postObj.id}" name="postId">
-// 		<input type="hidden" value="${postObj.timestamp}" name="postTime">	
-// 		<button id="updatePost__${postObj.id}">Update</button>
-// 		<button id="newPost__cancel">Cancel</button>
-// 	</div>
-// 	`
+		<input type="hidden" value="${entry.id}" name="entryId">
+		<input type="hidden" value="${entry.date}" name="entryTime">	
+		<button id="updateEntry__${entry.id}">Update</button>
+		<button id="newEntry__cancel">Cancel</button>
+	</div>
+	`
 }
