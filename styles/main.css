@@ -2,16 +2,21 @@
     font-family: 'submitFont';
     src: url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
 } */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Libre+Baskerville:wght@700&display=swap');
 
 body {
     border: solid black 4px;
-    background-color: darkgray;
+    background-color: rgba(255, 255, 255, 1);;
+    background-image: url('../images/artem-demura-lost-city.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 main {
-    font-family: 'Montserrat';
+    font-family: 'Libre Baskerville', serif;
+    color: rgba(255, 255, 255, opacity1)
 }
 
 .journal-input-container {
@@ -26,6 +31,7 @@ main {
     flex-direction: column;
     max-width: 50em;
     margin-bottom: .5em;
+    
 }
 
 .intro {
@@ -35,16 +41,17 @@ main {
 }
 
 .input-column fieldset{
-    background-color: black;
-    color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-weight: bold;
     font-size: large;
-    border: 2px black solid;
-    border-radius: 10px;
     margin-bottom: .5em;
+    color: rgba(255, 255, 255, 1);;
+    opacity: .9;
+    background-color: black;
+    border: 5px black solid;
+    border-radius: .5em;
 }
 
 .input-column {
@@ -53,16 +60,18 @@ main {
     
 }
 
-.logo img{
+.logo{
     min-width: 25em;
     min-height: 20em;
     width: 25em;
     height: 20em;
     padding: 0;
     margin: 0;
+    display: flex;
+    opacity: .9;
 }
 
-.logo {
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,30 +84,37 @@ textarea {
     
 }
 
-.record-button {
+button {
     height: 2.5em;
-    margin-left: 1em;
-    margin-top: -.5em;
-    background-color: #CA6C6C;
-    color:whitesmoke;
+    background-color: black;
+    color: rgba(255, 255, 255, 1);;
     font-family: 'submitFont;';
     font-weight: bold;
+    
+}
+
+.record-button {
+    margin-left: 0;
+    margin-top: -.5em;
 }
 
 .entries-column {
+    color: rgba(255, 255, 255, 1);;
+    opacity: .9;
+    font-size:xx-large;
     background-color: black;
-    color: whitesmoke;
+    border: 5px black solid;
+    border-radius: 10px;
+    padding: .3em;
     display: flex;
     justify-content: center;
     flex-direction: column;
     font-size: large;
-    border: 2px white solid;
-    border-radius: 10px;
     margin: .5em;
     margin-bottom: .5em;
     padding: .5em;
-    width: 50%;
-    
+    width: 30%;
+    max-width: 30em;
 }
 
 .journal-entries {
@@ -110,8 +126,14 @@ textarea {
 
 .section-title {
     margin-left: .5em;
-    font-variant-caps:small-caps;
-
+    margin-top: 0;
+    color: rgba(255, 255, 255, 1);;
+    font-size:xx-large;
+    background-color: black;
+    opacity: .8;
+    border: 5px black solid;
+    border-radius: .5em;
+    padding: .3em;
 }
 
 .entries-column h4 {
@@ -122,4 +144,16 @@ textarea {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+footer {
+    text-align: center;
+    color: whitesmoke;
+    font-variant-caps: all-small-caps;
+    font-size: large;
+    background-color: black;
+}
+
+footer a {
+    color:  rgba(255, 255, 255, 1);
 }

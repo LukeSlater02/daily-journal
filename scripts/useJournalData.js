@@ -24,6 +24,13 @@ export const insertEntries = () => {
     })
 }
 
+export const getFilteredEntries = (data) => {
+    entryLog.innerHTML = ""
+    for (const entry of data){
+        entryLog.innerHTML += JournalEntryComponent(entry)
+    }
+}
+
 export const createPost = postObj => {
     return fetch('http://localhost:8088/entries', {
         method: "POST",
@@ -42,4 +49,28 @@ export const getFormattedDate = date => {
     let day = date.getDate().toString().padStart(2, '0');
   
     return month + '/' + day + '/' + year;
+}
+
+export const deleteEntry = entryId => {
+    return fetch(`http://localhost:8088/entries/${entryId}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(response => response.json())
+}
+
+export const updatePost = postObj => {
+    return fetch(`http://localhost:8088/entries/${entryId}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application.json"
+        }
+    })
+    .then(response => response.json())
+}
+
+export const getSingleEntry = (entryId) => {
+    return fetch(`http://localhost:8088/entries/${entryId}`).then(response => response.json())
 }
