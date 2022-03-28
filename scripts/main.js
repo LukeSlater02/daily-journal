@@ -1,20 +1,48 @@
-import { insertEntries, getEntriesData, createPost, getFormattedDate } from "./useJournalData.js"
+import { insertEntries, getEntriesData, createPost, deleteEntry, getSingleEntry, getFilteredEntries } from "./useJournalData.js"
+import {entryEdit} from "./entryEdit.js"
 
-insertEntries()
-
-document.querySelector(".journal-entries").addEventListener("change", event => {
+insertEntries(getEntriesData())
+const entries = document.querySelector("main")
+entries.addEventListener("change", event => {
+    let filteredData;
     if (event.target.id === "understanding-filter") {
-        getEntriesData().then(data => {
-            const filteredData = data.filter(singleEntry => {
-                if (singleEntry.understanding === event.target.value) {
-                    return singleEntry
-                }
-
+        if (event.target.value != "---"){
+            getEntriesData().then(data => {
+                console.log(data);
+                console.log("EVENT VALUE IS:", event.target.value)
+                filteredData= data.filter(singleEntry => {
+                    if (singleEntry.understanding === event.target.value) {
+                        return singleEntry
+                    }
+    
+                })
+            }).then(response => {
+                getFilteredEntries(filteredData)
             })
-            console.log(filteredData);
+        } else {
+            insertEntries(getEntriesData())
+        }
+    }
+
+
+})
+
+entries.addEventListener("click", event => {
+    if (event.target.id.startsWith("delete")){
+        deleteEntry(event.target.id.split("__")[1]).then(insertEntries)
+    }
+    if (event.target.id.startsWith("edit")){
+        getSingleEntry(event.target.id.split("__")[1])
+        .then(response => {
+            showEdit(response)
         })
     }
 })
+
+const showEdit = (postObj) => {
+    const entryElement = entries;
+    entryElement.innerHTML = entryEdit(postObj);
+  }
 
 document.querySelector(".record-button").addEventListener("click", event => {
     event.preventDefault()
