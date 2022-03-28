@@ -1,4 +1,4 @@
-import { insertEntries, getEntriesData, createPost, deleteEntry, getSingleEntry, getFilteredEntries } from "./useJournalData.js"
+import { insertEntries, getEntriesData, createPost, deleteEntry, getSingleEntry, getFilteredEntries, updateEntry } from "./useJournalData.js"
 import {entryEdit} from "./entryEdit.js"
 
 insertEntries(getEntriesData())
@@ -40,16 +40,37 @@ entries.addEventListener("click", event => {
 })
 
 const showEdit = (postObj) => {
-    const entryElement = entries;
+    const entryElement = document.querySelector(".journal-entries");
     entryElement.innerHTML = entryEdit(postObj);
   }
+
+entries.addEventListener("click", event => {
+    if (event.target.id.startsWith("updateEntry")){
+        const date = document.querySelector("input[name='entryTime']").value
+        const concepts = document.querySelector("textarea[name='newConcepts']").value
+        const entry = document.querySelector("textarea[name='newJournalEntry']").value
+        const understanding = document.querySelector("#newUnd").value
+        const entryId = event.target.id.split("__")[1]
+        
+        const entryObject = {
+            concept: concepts,
+            date: date,
+            entry: entry,
+            understanding: understanding,
+            id: entryId
+        }
+        updateEntry(entryObject).then(insertEntries)
+    }
+
+    if (event.target.id === "newEntry__cancel"){
+        insertEntries()
+    }
+})
 
 document.querySelector(".record-button").addEventListener("click", event => {
     event.preventDefault()
     if (event.target.id === "record-button") {
-        var parts = document.querySelector("input[name='journalDate']").value.split('-');
-        var mydate = new Date(parts[0], parts[1] - 1, parts[2]);
-        const date = mydate
+        const date = document.querySelector("input[name='journalDate']").value
         const concepts = document.querySelector("textarea[name='conceptsCovered']").value
         const entry = document.querySelector("textarea[name='journalEntry']").value
         const understanding = document.querySelector("#understanding").value
