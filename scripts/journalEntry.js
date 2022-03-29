@@ -5,7 +5,7 @@ export const JournalEntryComponent = (entry) => {
             <br id="entry__${entry.id}">${entry.understanding}
             <h4 id="entry__${entry.id}">${entry.date}</h4>
             <p id="entry__${entry.id}">${entry.entry}</p>
-            <span><button id="edit__${entry.id}">Edit</button> <button id="delete__${entry.id}">Delete</button></span>
+            <input id="edit__${entry.id}" type="button" value="Edit"> <input id="delete__${entry.id}" type="button" value="Delete">
         </section>
     `
 }

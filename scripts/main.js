@@ -29,6 +29,7 @@ entries.addEventListener("change", event => {
 
 entries.addEventListener("click", event => {
     if (event.target.id.startsWith("delete")){
+        event.preventDefault()
         deleteEntry(event.target.id.split("__")[1]).then(insertEntries)
     }
     if (event.target.id.startsWith("edit")){

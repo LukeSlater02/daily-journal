@@ -28,8 +28,7 @@ export const entryEdit = (entry) => {
 		
 		<input type="hidden" value="${entry.id}" name="entryId">
 		<input type="hidden" value="${entry.date}" name="entryTime">	
-		<button id="updateEntry__${entry.id}">Update</button>
-		<button id="newEntry__cancel">Cancel</button>
+        <input id="updateEntry__${entry.id}" type="button" value="Update"> <input id="newEntry__cancel" type="button" value="Cancel">
 	</div>
 	`
 }
