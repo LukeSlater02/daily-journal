@@ -10,6 +10,7 @@ body {
     border: solid black 4px;
     background-color: rgba(255, 255, 255, 1);;
     background-image: url('../images/artem-demura-lost-city.jpg');
+    background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -31,7 +32,6 @@ main {
     flex-direction: column;
     max-width: 50em;
     margin-bottom: .5em;
-    
 }
 
 .intro {
@@ -57,7 +57,6 @@ main {
 .input-column {
     display: flex;
     justify-content: center;
-    
 }
 
 .logo{
@@ -81,17 +80,47 @@ header {
 
 textarea {
     resize: vertical;
-    
+    background-color: black;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    outline: none;
 }
 
-button {
+select {
+    background-color: black;
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+    border: none;
+}
+
+#journalDate {
+    outline: none;
+    border: none;
+    background-color: black;
+    color:rgba(255, 255, 255, 1);
+}
+
+textarea:focus{
+    border: #b2beb5 double 1px;
+    border-radius: 2px;
+}
+
+input[type=button] {
     height: 2.5em;
     background-color: black;
-    color: rgba(255, 255, 255, 1);;
+    color: rgba(255, 255, 255, 1);
     font-family: 'submitFont;';
     font-weight: bold;
-    
 }
+
+/* input[type=button]{
+    background-color: #0C0404;
+    border: 2px black solid;
+    color: #A7171A;
+    font-family: 'submitFont;';
+    font-weight: bold;
+    height: 2.5em;
+} */
 
 .record-button {
     margin-left: 0;
@@ -100,7 +129,7 @@ button {
 
 .entries-column {
     color: rgba(255, 255, 255, 1);;
-    opacity: .9;
+    opacity: .8;
     font-size:xx-large;
     background-color: black;
     border: 5px black solid;
