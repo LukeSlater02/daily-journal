@@ -1,7 +1,7 @@
 import {JournalEntryComponent} from "./journalEntry.js"
 
 export const getEntriesData = () => {
-    return fetch('http://localhost:8088/entries')
+    return fetch('http://localhost:8088/entries?_expand=user')
     .then(response => response.json())
     .then(data => {
        let sortedEntries = data.sort(
@@ -22,6 +22,7 @@ export const insertEntries = () => {
             entryLog.innerHTML += JournalEntryComponent(entry)
         }
     })
+
 }
 
 export const getFilteredEntries = (data) => {
@@ -77,3 +78,9 @@ export const updateEntry = entryObj => {
         .then(response => response.json())
         
   }
+
+export const header = () => {
+    let user = JSON.parse(sessionStorage.getItem('user'))
+    console.log(user);
+    document.querySelector("header").innerHTML = `<h1 style="margin-top: .6em" class="section-title">${user.name}'s Edgy Journal - Cohort 55</h1>`
+}

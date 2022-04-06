@@ -1,8 +1,50 @@
-import { insertEntries, getEntriesData, createPost, deleteEntry, getSingleEntry, getFilteredEntries, updateEntry } from "./useJournalData.js"
+import { insertEntries, getEntriesData, createPost, deleteEntry, getSingleEntry, getFilteredEntries, updateEntry, header} from "./useJournalData.js"
 import {entryEdit} from "./entryEdit.js"
-
-insertEntries(getEntriesData())
+import {JournalEntryComponent} from "./journalEntry.js"
+import {checkForUser, getLoggedInUser, loginUser, registerUser} from "./login.js"
 const entries = document.querySelector("main")
+
+checkForUser()
+
+entries.addEventListener("click", event => {
+    event.preventDefault();
+    if (event.target.id === "login__submit") {
+      //collect all the details into an object
+        const userObject = {
+        name: document.querySelector("input[name='name']").value,
+        email: document.querySelector("input[name='email']").value
+      }
+      loginUser(userObject)
+      .then(dbUserObj => {
+        if(dbUserObj){
+          sessionStorage.setItem("user", JSON.stringify(dbUserObj))
+        }
+        else {
+          //got a false value - no user
+          const entryElement = document.querySelector(".entryForm");
+          entryElement.innerHTML = `<p class="center">That user does not exist. Please try again or register for your free account.</p> ${LoginForm()} <hr/> <hr/> ${RegisterForm()}`;
+        }
+      })
+    }
+  })
+
+  entries.addEventListener("click", event => {
+    event.preventDefault();
+    if (event.target.id === "register__submit") {
+      //collect all the details into an object
+      const userObject = {
+        name: document.querySelector("input[name='registerName']").value,
+        email: document.querySelector("input[name='registerEmail']").value
+      }
+      registerUser(userObject)
+      .then(dbUserObj => {
+        sessionStorage.setItem("user", JSON.stringify(dbUserObj));
+        insertEntries();
+      })
+    }
+  })
+
+
 entries.addEventListener("change", event => {
     let filteredData;
     if (event.target.id === "understanding-filter") {
@@ -10,7 +52,7 @@ entries.addEventListener("change", event => {
             getEntriesData().then(data => {
                 console.log(data);
                 console.log("EVENT VALUE IS:", event.target.value)
-                filteredData= data.filter(singleEntry => {
+                filteredData = data.filter(singleEntry => {
                     if (singleEntry.understanding === event.target.value) {
                         return singleEntry
                     }
@@ -20,12 +62,14 @@ entries.addEventListener("change", event => {
                 getFilteredEntries(filteredData)
             })
         } else {
-            insertEntries(getEntriesData())
+            insertEntries()
         }
     }
 
 
 })
+
+header()
 
 entries.addEventListener("click", event => {
     if (event.target.id.startsWith("delete")){
@@ -52,13 +96,15 @@ entries.addEventListener("click", event => {
         const entry = document.querySelector("textarea[name='newJournalEntry']").value
         const understanding = document.querySelector("#newUnd").value
         const entryId = event.target.id.split("__")[1]
-        
+        const userId = getLoggedInUser().id
+
         const entryObject = {
             concept: concepts,
             date: date,
             entry: entry,
             understanding: understanding,
-            id: entryId
+            id: entryId,
+            userId: userId
         }
         updateEntry(entryObject).then(insertEntries)
     }
@@ -81,6 +127,7 @@ document.querySelector(".record-button").addEventListener("click", event => {
             date: date,
             entry: entry,
             understanding: understanding,
+            userId: getLoggedInUser().id
         }
         createPost(entryObject).then(insertEntries)
 
@@ -91,3 +138,15 @@ document.querySelector(".record-button").addEventListener("click", event => {
     }
 })
 
+entries.addEventListener("click", event => {
+  if (event.target.id === "filter-button"){
+    getEntriesData().then(data => {
+      let myEntries = data.filter(ele => {
+        return ele.userId === getLoggedInUser().id
+      })
+      for (const entry of myEntries){
+        document.querySelector(".journal-entries").innerHTML = JournalEntryComponent(entry)
+    }
+    })
+  }
+})
