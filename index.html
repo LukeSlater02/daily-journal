@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1 style="margin-top: .6em" class="section-title">Luke's Edgy Journal - Cohort 55</h1>
+        
     </header>
     <main>
         <section class="journal-input-container">
@@ -54,7 +54,7 @@
                 </select>
             </fieldset>
             <article class="input-column">
-                <input class="record-button" type="button" value="Record Journal Entry">
+                <input class="record-button" id="record-button" type="button" value="Record Journal Entry">
             </article>
         </form>
         </article>
@@ -63,7 +63,8 @@
    
     <section class="journal-filter">
                 <h2 class="section-title" style="text-align:center; margin-top: 4em; margin-bottom: 0;">Journal Entries</h2>
-        <h3 style="margin-bottom: .1em; color: white;">Filter by level of understanding.</h3>
+        <h3 style="margin-bottom: .1em; color: white;">Filter:</h3>
+        <p style="color: rgba(255, 255, 255, 1);">by level of understanding:</p>
         <select style="width:23em" name="understanding" id="understanding-filter">
             <option>---</option>
             <option>Got it down.</option>
@@ -71,7 +72,9 @@
             <option>Need more practice.</option>
             <option>Having trouble.</option>
             <option>Completely baffled.</option>
-        </select>
+        </select>  
+        <p style="color: rgba(255, 255, 255, 1);">by only your posts:</p>
+        <input type="button" id="filter-button" value="Click">
     </section>
 
     <section class="journal-entries">
@@ -85,3 +88,4 @@
     <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>
+

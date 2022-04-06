@@ -5,56 +5,94 @@
       "date": "02/14/2022",
       "concept": "First Day",
       "entry": "First day at NSS! We mostly went over introductions to our classmates, the staff, the overall goal of the program and what is expected of us.",
-      "understanding": "Need more practice."
+      "understanding": "Need more practice.",
+      "userId": 1
     },
     {
       "id": 2,
       "date": "03/01/2022",
       "concept": "Created This Journal",
       "entry": "Used what we learned with Martin's Aquarium (importing JS, modular JS, using JS to generate HTML and have it render on the DOM) to create a personal journal. I feel like I understand all of the concepts pretty well but can't quite recreate them from memory, just need a bit more practice. Being able to create my own personal site and have no restraints on its appearance is cool.",
-      "understanding": "I think I've got it, but will need to check notes."
+      "understanding": "I think I've got it, but will need to check notes.",
+      "userId": 1
     },
     {
       "id": 3,
       "date": "02/25/2022",
       "concept": "Group Project 1 Presentation",
       "entry": "First time taking all this new knowledge and using it in a collaborative setting. I enjoyed working with my group and think we did a great job. I learned how to make a clickable map which was cool.",
-      "understanding": "Got it down."
+      "understanding": "Got it down.",
+      "userId": 1
     },
     {
       "id": 4,
       "date": "03/05/2022",
       "concept": "Group Project 2 Presentation",
       "entry": "We took all the concepts we've learned so far about proper planning, HTML site layout and CSS styling and combined those with new knowledge about JS imports and dynamically rendering HTML using JS to create a better, more modular version of the country sites we did earlier.",
-      "understanding": "Need more practice."
+      "understanding": "Need more practice.",
+      "userId": 1
     },
     {
       "date": "03/16/2022",
       "concept": "Learning about APIs and Async",
       "entry": "APIs are cool and I've got that down. Async is rough though, just gotta get used to it & thinking about Js in that way.",
       "understanding": "Need more practice.",
-      "id": 5
+      "id": 5,
+      "userId": 1
     },
     {
       "concept": "Inputting Data in JS ",
       "date": "2022-03-18",
       "entry": "I can now just click the 'record journal entry' button to save these entries instead of having to manually add them to the data file. Next, I need to figure out how to repopulate the DOM with those new entries without having to refresh the page.",
       "understanding": "I think I've got it, but will need to check notes.",
-      "id": 6
+      "id": 6,
+      "userId": 1
     },
     {
       "concept": "Finished the discord bot.",
       "date": "2022-03-22",
       "entry": "Finished the discord bot, or as finished as it's going to get. Learned a lot.",
       "understanding": "I think I've got it, but will need to check notes.",
-      "id": 7
+      "id": 7,
+      "userId": 1
     },
     {
       "concept": "Today we covered the U and D of CRUD.",
       "date": "2022-03-28T05:00:00.000Z",
       "entry": "Got the delete functionality working pretty easily but got distracted by styling for a while after, now it's on to the editing bit..\n\nedit: edit works edit2: still need to fix the dates",
       "understanding": "Need more practice.",
-      "id": 8
+      "id": 8,
+      "userId": 1
+    },
+    {
+      "concept": "Adding log in with user specific deletes and edits.",
+      "date": "2022-04-05",
+      "entry": "Went pretty well. Still need to style the login and have it auto-populate the DOM once you've logged in, without having to refresh.\n\nedit: still still need to fix the dates",
+      "understanding": "I think I've got it, but will need to check notes.",
+      "id": 10,
+      "userId": 4
+    }
+  ],
+  "users": [
+    {
+      "name": "Luke",
+      "email": "luke@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Eric",
+      "email": "eric@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "dungEater",
+      "email": "dungeater@yahoo.com",
+      "id": 3
+    },
+    {
+      "name": "test",
+      "email": "test@gmail.com",
+      "id": 4
     }
   ]
 }
