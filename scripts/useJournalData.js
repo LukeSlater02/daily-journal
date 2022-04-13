@@ -80,7 +80,7 @@ export const updateEntry = entryObj => {
   }
 
 export const header = () => {
-    let user = JSON.parse(sessionStorage.getItem('user'))
-    console.log(user);
-    document.querySelector("header").innerHTML = `<h1 style="margin-top: .6em" class="section-title">${user.name}'s Edgy Journal - Cohort 55</h1>`
+    if (user != null){
+        document.querySelector("header").innerHTML = `<h1 style="margin-top: .6em" class="section-title">${user.name}'s Edgy Journal - Cohort 55</h1>`
+    }
 }
